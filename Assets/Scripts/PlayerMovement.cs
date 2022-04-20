@@ -18,8 +18,8 @@ public class PlayerMovement : MonoBehaviour
     public float lowJumpMultipler = 1;
 
     // Animation variables
-    //public SpriteRenderer spriteRenderer;
-    //public Animator animator;
+    public SpriteRenderer spriteRenderer;
+    public Animator animator;
 
     // Start is called before the first frame update
     void Start()
@@ -34,25 +34,37 @@ public class PlayerMovement : MonoBehaviour
         if(Input.GetKey("d") || Input.GetKey("right"))
         {
             rb2D.velocity = new Vector2(runSpeed, rb2D.velocity.y);
-            //spriteRenderer.flipX = false;
-            //animator.SetBool("Run", true);
+            spriteRenderer.flipX = false;
+            animator.SetBool("Run", true);
         }
         else if(Input.GetKey("a") || Input.GetKey("left"))
         {
             rb2D.velocity = new Vector2(-runSpeed, rb2D.velocity.y);
-            //spriteRenderer.flipX = true;
-            //animator.SetBool("Run", true);
+            spriteRenderer.flipX = true;
+            animator.SetBool("Run", true);
         }
         else
         {
             rb2D.velocity = new Vector2(0, rb2D.velocity.y);
-            //animator.SetBool("Run", false);
+            animator.SetBool("Run", false);
         }
 
         // Player jump movement
         if (Input.GetKey("space") && CheckGround.isGrounded)
         {
             rb2D.velocity = new Vector2(rb2D.velocity.x, jumpSpeed);
+        }
+
+        // Jump animationo if
+        if(CheckGround.isGrounded == false)
+        {
+            animator.SetBool("Jump", true);
+            animator.SetBool("Run", false);
+        }
+
+        if(CheckGround.isGrounded == true)
+        {
+            animator.SetBool("Jump", false);
         }
 
         if(betterJump)

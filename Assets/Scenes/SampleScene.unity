@@ -27371,6 +27371,8 @@ MonoBehaviour:
   betterJump: 1
   fallMultiplier: 0.5
   lowJumpMultipler: 1
+  spriteRenderer: {fileID: 2002074524}
+  animator: {fileID: 2002074523}
 --- !u!95 &2002074523
 Animator:
   serializedVersion: 3

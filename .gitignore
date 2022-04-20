@@ -1,0 +1,11 @@
+# Visual studio and Visual Studio code folders
+.vs
+.vscode
+
+# Unity user settings folder
+UserSettings
+
+# Visual studio config files
+.vsconfig
+Assembly-CSharp.csproj
+Fred The Frog.sln

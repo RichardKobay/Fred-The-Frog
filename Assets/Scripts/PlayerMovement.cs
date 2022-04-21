@@ -18,7 +18,10 @@ public class PlayerMovement : MonoBehaviour
     public float lowJumpMultipler = 1;
 
     // Animation variables
+    //public SpriteRenderer spriteRenderer;
     public SpriteRenderer spriteRenderer;
+
+    //public Animator animator;
     public Animator animator;
 
     // Start is called before the first frame update
@@ -34,14 +37,18 @@ public class PlayerMovement : MonoBehaviour
         if(Input.GetKey("d") || Input.GetKey("right"))
         {
             rb2D.velocity = new Vector2(runSpeed, rb2D.velocity.y);
+            //spriteRenderer.flipX = false;
             spriteRenderer.flipX = false;
-            animator.SetBool("Run", true);
+            //animator.SetBool("Run", true);
+            animator.SetBool("Run",true);
         }
         else if(Input.GetKey("a") || Input.GetKey("left"))
         {
             rb2D.velocity = new Vector2(-runSpeed, rb2D.velocity.y);
+            //spriteRenderer.flipX = true;
             spriteRenderer.flipX = true;
-            animator.SetBool("Run", true);
+            //animator.SetBool("Run", true);
+            animator.SetBool("Run",true);
         }
         else
         {
@@ -54,15 +61,13 @@ public class PlayerMovement : MonoBehaviour
         {
             rb2D.velocity = new Vector2(rb2D.velocity.x, jumpSpeed);
         }
-
-        // Jump animationo if
-        if(CheckGround.isGrounded == false)
+        //checkground detects another gameObject
+        if(CheckGround.isGrounded==false)
         {
             animator.SetBool("Jump", true);
             animator.SetBool("Run", false);
         }
-
-        if(CheckGround.isGrounded == true)
+        if(CheckGround.isGrounded==true)
         {
             animator.SetBool("Jump", false);
         }

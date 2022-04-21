@@ -2916,6 +2916,7 @@ GameObject:
   - component: {fileID: 1270293081}
   - component: {fileID: 1270293080}
   - component: {fileID: 1270293079}
+  - component: {fileID: 1270293083}
   m_Layer: 0
   m_Name: Apple (1)
   m_TagString: Untagged
@@ -2931,8 +2932,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1270293077}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.887, y: 1.436, z: 35.893753}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 4.885, y: 1.346, z: 35.893753}
+  m_LocalScale: {x: 1.860136, y: 1.860136, z: 1.860136}
   m_Children:
   - {fileID: 331319201}
   m_Father: {fileID: 932429580}
@@ -3036,7 +3037,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7293598183456022363, guid: 1ddc9afd21fec77489b1248d18f31b68, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.011456013, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3046,6 +3047,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1270293083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1270293077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b3aec5d56589014e9cf3ef3d72d3f63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1286860607
 GameObject:
   m_ObjectHideFlags: 0

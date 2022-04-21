@@ -6,10 +6,10 @@ using UnityEngine.SceneManagement;
 public class PlayerRespawn : MonoBehaviour
 {
     public Animator animator;
+
     //the enemies call the function PlayerDamaged()
     public void PlayerDamaged(){
         animator.Play("Hit");
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

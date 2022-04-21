@@ -10,7 +10,14 @@ public class NextLevel : MonoBehaviour
     // Detects the player and shange the scene
     private void OnTriggerEnter2D(Collider2D collision){
         if(collision.CompareTag("Player")){
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            if(NextLevelKey.key == true)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
+            else
+            {
+                Debug.Log("Encuentra la llave");
+            }
         }
     }
 }

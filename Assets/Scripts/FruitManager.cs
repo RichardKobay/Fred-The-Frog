@@ -16,8 +16,7 @@ public class FruitManager : MonoBehaviour
     public Text levelCleared;
     public void AllFruitsCollected(){
         if(transform.childCount == 0){
-            Debug.Log("No quedan frutas, Victoria");
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            Debug.Log("lasjd");
         }
     }
 }

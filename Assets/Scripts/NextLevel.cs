@@ -7,15 +7,10 @@ public class NextLevel : MonoBehaviour
 {
     public Text levelCleared;
 
-    //the flag detects the Player
+    // Detects the player and shange the scene
     private void OnTriggerEnter2D(Collider2D collision){
         if(collision.CompareTag("Player")){
-            levelCleared.gameObject.SetActive(true);
-            Invoke("ChangeScene", 1);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
-    //level change
-    void ChangeScene(){
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
-        }
 }

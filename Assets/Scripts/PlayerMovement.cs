@@ -17,6 +17,10 @@ public class PlayerMovement : MonoBehaviour
     public float fallMultiplier = 0.5f;
     public float lowJumpMultipler = 1;
 
+    //Double Jump Variables
+    public float doubleJumpSpeed = 2.5f;
+    private bool canDoubleJump;
+
     // Animation variables
     //public SpriteRenderer spriteRenderer;
     public SpriteRenderer spriteRenderer;
@@ -28,6 +32,50 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
+    }
+    
+    //Update used for the right functioning of the Double Jump
+    private void Update()
+    {
+        // Player jump movement
+        if (Input.GetKey("space"))
+        {
+            if(CheckGround.isGrounded)
+            {
+                canDoubleJump = true;
+                rb2D.velocity = new Vector2(rb2D.velocity.x, jumpSpeed);
+            }else{
+                if(Input.GetKeyDown("space"))
+                {
+                    if(canDoubleJump)
+                    {
+                        animator.SetBool("DoubleJump", true);
+                        rb2D.velocity = new Vector2(rb2D.velocity.x, doubleJumpSpeed);
+                        canDoubleJump = false;
+                    }
+                }
+            }
+            
+        }
+        //checkground detects another gameObject
+        if(CheckGround.isGrounded==false)
+        {
+            animator.SetBool("Jump", true);
+            animator.SetBool("Run", false);
+        }
+        if(CheckGround.isGrounded==true)
+        {
+            animator.SetBool("Jump", false);
+            animator.SetBool("DoubleJump", false);
+            animator.SetBool("Falling", false);
+        }
+        
+        //Makes the player know when its falling (y velocity is less than 0) or jumping (y velocity is more than 0)
+        if(rb2D.velocity.y<0){
+            animator.SetBool("Falling", true);
+        }else if(rb2D.velocity.y>0){
+            animator.SetBool("Falling", false);
+        }
     }
 
     // Update is called once per frame
@@ -55,23 +103,7 @@ public class PlayerMovement : MonoBehaviour
             rb2D.velocity = new Vector2(0, rb2D.velocity.y);
             animator.SetBool("Run", false);
         }
-
-        // Player jump movement
-        if (Input.GetKey("space") && CheckGround.isGrounded)
-        {
-            rb2D.velocity = new Vector2(rb2D.velocity.x, jumpSpeed);
-        }
-        //checkground detects another gameObject
-        if(CheckGround.isGrounded==false)
-        {
-            animator.SetBool("Jump", true);
-            animator.SetBool("Run", false);
-        }
-        if(CheckGround.isGrounded==true)
-        {
-            animator.SetBool("Jump", false);
-        }
-
+        
         if(betterJump)
         {
             if(rb2D.velocity.y < 0)

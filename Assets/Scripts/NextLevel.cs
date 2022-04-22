@@ -10,6 +10,10 @@ public class NextLevel : MonoBehaviour
     // transitin variable
     public GameObject transition;
 
+    //animator variable
+    public Animator animator;
+
+
     // Detects the player and shange the scene
     private void OnTriggerEnter2D(Collider2D collision){
         if(collision.CompareTag("Player")){
@@ -17,8 +21,8 @@ public class NextLevel : MonoBehaviour
             {
                 //levelCleared.gameObject.SetActive(true);
                 //transition.SetActive(true);
-                //Invoke("ChangeScene", 1);
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                Invoke("ChangeScene", 1);
+                animator.SetBool("DoorOpen",true);
 
             }
             else
@@ -30,5 +34,7 @@ public class NextLevel : MonoBehaviour
 
     void ChangeScene()
     {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
     }
 }

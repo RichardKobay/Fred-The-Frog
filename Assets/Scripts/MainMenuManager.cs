@@ -12,6 +12,9 @@ public class MainMenuManager : MonoBehaviour
     public string levelName;
     private bool inDoor = false;
 
+    //Animator variable
+    public Animator animator;
+
     // Door collision void enter 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -35,7 +38,12 @@ public class MainMenuManager : MonoBehaviour
     {
         if (inDoor && Input.GetKey("e"))
         {
-            SceneManager.LoadScene(levelName);
+            animator.SetBool("MenuDoorOpen",true);
+            Invoke("ChangeScene", 1);
+            
         }
+    }
+    void ChangeScene(){
+        SceneManager.LoadScene(levelName);
     }
 }

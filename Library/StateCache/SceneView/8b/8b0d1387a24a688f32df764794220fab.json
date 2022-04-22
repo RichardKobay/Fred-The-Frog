@@ -1,1 +1,9 @@
+<<<<<<< HEAD
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"m_AlwaysRefresh":false,"showFog":true,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true,"showVisualEffectGraphs":true,"m_FxEnabled":true},"in2DMode":true,"pivot":{"x":3.1399102210998537,"y":0.5212916731834412,"z":-29.77025032043457},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":2.200019598007202,"orthographic":true}
+=======
+<<<<<<< HEAD
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"m_AlwaysRefresh":false,"showFog":true,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true,"showVisualEffectGraphs":true,"m_FxEnabled":true},"in2DMode":true,"pivot":{"x":5.926943778991699,"y":0.8501541614532471,"z":-5.482884407043457},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":4.595637321472168,"orthographic":true}
+=======
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"m_AlwaysRefresh":false,"showFog":true,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true,"showVisualEffectGraphs":true,"m_FxEnabled":true},"in2DMode":true,"pivot":{"x":9.672281265258789,"y":2.6427011489868166,"z":-29.00429916381836},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":6.012472152709961,"orthographic":true}
+>>>>>>> 867fbcffcf1599f3d27e116427d94a61e988079f
+>>>>>>> 2fd2107bd551c0300bd9731f482c731bde1b2a3b

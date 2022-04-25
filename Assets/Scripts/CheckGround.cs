@@ -8,12 +8,19 @@ public class CheckGround : MonoBehaviour
     //the CheckGround detects another gameObject
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        isGrounded = true;
+        if(collision.CompareTag("Ground"))
+        {
+            isGrounded = true;
+        }
+        
     }
 
     //the CheckGround doesn't detect an other gameObject
     private void OnTriggerExit2D(Collider2D collision)
     {
-        isGrounded = false;
+        if(collision.CompareTag("Ground"))
+        {
+            isGrounded = false;
+        }
     }
 }

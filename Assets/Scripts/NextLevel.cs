@@ -35,6 +35,6 @@ public class NextLevel : MonoBehaviour
     void ChangeScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-
+        NextLevelKey.key = false;
     }
 }

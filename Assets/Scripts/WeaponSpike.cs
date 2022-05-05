@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class WeaponSpike : MonoBehaviour
 {
-    //Spike variable
-    private bool touchSpike = false;
-
+    
     //Animator variable
     public Animator animator;
 
@@ -15,31 +13,20 @@ public class WeaponSpike : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            
-            touchSpike = true;
-            
-        }
-    }
-
-    // Spike collision void exit
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        
-        touchSpike = false;
-        
-    }
-
-    private void Update()
-    {
-        if (touchSpike && Input.GetKey("e"))
-        {
             animator.SetBool("Fall",true);
             Invoke("reset",4);
+        }
+        if(collision.transform.CompareTag("BossHead")){
+            BossHead.life= BossHead.life-1;
+            Debug.Log(BossHead.life);
             
         }
     }
+
+    
     void reset(){
         animator.SetBool("Fall", false);
 
     }
+    
 }

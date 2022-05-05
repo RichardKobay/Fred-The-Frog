@@ -1,23 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BossHead : MonoBehaviour
 {
-    public int life= 10;
+    public static int life= 50;
 
-    private void OnTriggerEnter2D(Collider2D collision){
+    void Start(){
+        life=50;
+    }
+    private void OnCollisionEnter2D(Collision2D collision){
         if(collision.transform.CompareTag("Player")){
             Debug.Log("Player Damaged");
             collision.transform.GetComponent<PlayerRespawn>().PlayerDamaged();
             NextLevelKey.key = false;
         }
-            if(collision.transform.CompareTag("Spike")){
-            Debug.Log("Boss Damaged");
-            life= life -10;
             
-        }
         
+    }
+    void Update(){
+        if (life<=0){
+            SceneManager.LoadScene("EndCinematic");
+        }
     }
     
 }

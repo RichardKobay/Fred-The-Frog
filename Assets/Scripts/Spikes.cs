@@ -11,6 +11,7 @@ public class Spikes : MonoBehaviour
         if(collision.transform.CompareTag("Player")){
             Debug.Log("Player Damaged");
             collision.transform.GetComponent<PlayerRespawn>().PlayerDamaged();
+            NextLevelKey.key = false;
         }
     }
 }

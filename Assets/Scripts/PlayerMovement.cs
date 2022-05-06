@@ -37,6 +37,8 @@ public class PlayerMovement : MonoBehaviour
     //Update used for the right functioning of the Double Jump
     private void Update()
     {
+        //fred don't move if an cinematic is on
+        if (Soriano.onCinematic == false){
         // Player jump movement
         if (Input.GetKey("space"))
         {
@@ -76,11 +78,14 @@ public class PlayerMovement : MonoBehaviour
         }else if(rb2D.velocity.y>0){
             animator.SetBool("Falling", false);
         }
+        }
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        //fred don't move if an cinematic is on
+        if (Soriano.onCinematic == false){
         // Player laft & right momement
         if(Input.GetKey("d") || Input.GetKey("right"))
         {
@@ -115,6 +120,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 rb2D.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultipler) * Time.deltaTime;
             }
+        }
         }
     }
 }

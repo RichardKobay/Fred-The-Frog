@@ -15,11 +15,11 @@ C:/Users/luisa/Intentos del proyecto Sub2/Fred-The-Frog
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-55123
+52764
 Successfully changed project path to: C:/Users/luisa/Intentos del proyecto Sub2/Fred-The-Frog
 C:/Users/luisa/Intentos del proyecto Sub2/Fred-The-Frog
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 81.94 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 94.81 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.33f1 (915a7af8b0d5)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.33f1/Editor/Data/Resources/UnitySubsystems
@@ -35,173 +35,44 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.33f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.33f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.33f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56244
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56180
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.33f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.33f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.003782 seconds.
+Registered in 0.078140 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 102.89 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 99.79 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.941 seconds
+- Completed reload, in  1.812 seconds
 Domain Reload Profiling:
-	ReloadAssembly (942ms)
-		BeginReloadAssembly (94ms)
+	ReloadAssembly (1813ms)
+		BeginReloadAssembly (529ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (741ms)
-			LoadAssemblies (93ms)
+		EndReloadAssembly (1060ms)
+			LoadAssemblies (527ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (221ms)
+			SetupTypeCache (514ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (40ms)
-			SetupLoadedEditorAssemblies (342ms)
+			SetupLoadedEditorAssemblies (288ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (7ms)
+				InitializePlatformSupportModulesInManaged (8ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (103ms)
-				BeforeProcessingInitializeOnLoad (18ms)
-				ProcessInitializeOnLoadAttributes (160ms)
-				ProcessInitializeOnLoadMethodAttributes (52ms)
+				RefreshPlugins (100ms)
+				BeforeProcessingInitializeOnLoad (15ms)
+				ProcessInitializeOnLoadAttributes (109ms)
+				ProcessInitializeOnLoadMethodAttributes (55ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.008468 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\luisa\Intentos del proyecto Sub2\Fred-The-Frog\Library\PackageCache\com.unity.collab-proxy@1.15.15\Lib\Editor\PlasticSCM\unityplastic.dll
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 78.58 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.413 seconds
-Domain Reload Profiling:
-	ReloadAssembly (2416ms)
-		BeginReloadAssembly (282ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (12ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (32ms)
-		EndReloadAssembly (2029ms)
-			LoadAssemblies (196ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (672ms)
-			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (153ms)
-			SetupLoadedEditorAssemblies (743ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (6ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (79ms)
-				BeforeProcessingInitializeOnLoad (128ms)
-				ProcessInitializeOnLoadAttributes (488ms)
-				ProcessInitializeOnLoadMethodAttributes (29ms)
-				AfterProcessingInitializeOnLoad (13ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (16ms)
-Platform modules already initialized, skipping
-========================================================================
-Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.84 seconds
-Refreshing native plugins compatible for Editor in 0.80 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2325 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 100.7 MB.
-System memory in use after: 100.9 MB.
-
-Unloading 38 unused Assets to reduce memory usage. Loaded Objects now: 2751.
-Total: 3.387700 ms (FindLiveObjects: 0.209100 ms CreateObjectMapping: 0.137500 ms MarkObjects: 2.956800 ms  DeleteObjects: 0.083100 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  path: Assets/Pixel Adventure 1/Assets/Items/key.png
-  artifactKey: Guid(1a11b14fb6e19ac419e3116f57bb8095) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Pixel Adventure 1/Assets/Items/key.png using Guid(1a11b14fb6e19ac419e3116f57bb8095) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5367575a25ef0f3cb86bea6c9fe6eecf') in 0.653978 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.001637 seconds.
-  path: Assets/Pixel Adventure 1/Assets/Door/eeportal.png
-  artifactKey: Guid(06fe66ab9a981ae41a847382e7fc56a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Pixel Adventure 1/Assets/Door/eeportal.png using Guid(06fe66ab9a981ae41a847382e7fc56a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b1471f4c57a26f130d0ada584f9d600') in 0.164608 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000586 seconds.
-  path: Assets/Pixel Adventure 1/Assets/Items/Boxes
-  artifactKey: Guid(648ed3ed826419f4c96791acd0d924a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Pixel Adventure 1/Assets/Items/Boxes using Guid(648ed3ed826419f4c96791acd0d924a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a408b2a8ec2d35681ee8abd929a82d27') in 0.029887 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000366 seconds.
-  path: Assets/Pixel Adventure 1/Assets/Items/Boxes/Box3/Hit (28x24).png
-  artifactKey: Guid(c515460e432a71b45bd7784aebe881d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Pixel Adventure 1/Assets/Items/Boxes/Box3/Hit (28x24).png using Guid(c515460e432a71b45bd7784aebe881d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e82ed12c6d245ef6129231810b2d157') in 0.076667 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000388 seconds.
-  path: Assets/Pixel Adventure 1/Assets/Items/Boxes/Box3/Idle.png
-  artifactKey: Guid(bcb85d05bbdb8a2468fe865da75a2795) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Pixel Adventure 1/Assets/Items/Boxes/Box3/Idle.png using Guid(bcb85d05bbdb8a2468fe865da75a2795) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6db4e2afe66f27add09624be3842db5d') in 0.058106 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000356 seconds.
-  path: Assets/Pixel Adventure 1/Assets/Items/Boxes/Box3
-  artifactKey: Guid(1e2fdfdd8b2c59b4db96dd6ccb9d86b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Pixel Adventure 1/Assets/Items/Boxes/Box3 using Guid(1e2fdfdd8b2c59b4db96dd6ccb9d86b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8dfffa6f8ccf6ccbfb71c021fd7388e7') in 0.026534 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000314 seconds.
-  path: Assets/Pixel Adventure 1/Assets/Items/Boxes/Box3/Break (28x24).png
-  artifactKey: Guid(32cc0ed12a4ceea46a9c541b632a008f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Pixel Adventure 1/Assets/Items/Boxes/Box3/Break (28x24).png using Guid(32cc0ed12a4ceea46a9c541b632a008f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '552bec2350bdd39c67b35a3c6d5e957d') in 0.073692 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1158.426180 seconds.
-  path: Assets/Animatioons/CharacterAnimatioons
-  artifactKey: Guid(9d93b280e5d71ab4080b948ad861ac22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animatioons/CharacterAnimatioons using Guid(9d93b280e5d71ab4080b948ad861ac22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '102f5f300dd6ddcdd0ec6ae5ee70abd6') in 0.019686 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.437135 seconds.
-  path: Assets/Animatioons/CharacterAnimatioons/Fred
-  artifactKey: Guid(4e9c5ffba831fb64f96311e38fd09303) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animatioons/CharacterAnimatioons/Fred using Guid(4e9c5ffba831fb64f96311e38fd09303) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cce42d12fa40467993f60651bd7c9dd5') in 0.013838 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 3.141088 seconds.
-  path: Assets/Animatioons/CharacterAnimatioons/Fred/FredAnimation.controller
-  artifactKey: Guid(e10a2c8825dfa8542982b52eb0a5d707) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animatioons/CharacterAnimatioons/Fred/FredAnimation.controller using Guid(e10a2c8825dfa8542982b52eb0a5d707) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04967c5faadb8f93777f45d6cab4224c') in 0.064842 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 44.057870 seconds.
-  path: Assets/Animatioons/CharacterAnimatioons/Fred/New Animator Controller.controller
-  artifactKey: Guid(06df3e9dcc2fa424b8f4c2ed6460fc53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animatioons/CharacterAnimatioons/Fred/New Animator Controller.controller using Guid(06df3e9dcc2fa424b8f4c2ed6460fc53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ad6ee4c436fb70cadfd682681b0f077') in 0.530354 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 380.734165 seconds.
-  path: Assets/Scripts/PlayerMovement.cs
-  artifactKey: Guid(9e9d9790262c88a44acbc4663293dbd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/PlayerMovement.cs using Guid(9e9d9790262c88a44acbc4663293dbd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cfa774f8207edc11f953840a5c6f3224') in 0.224555 seconds 
-AssetImportWorkerClient::OnTransportError - code=2 error=End of file
+Registered in 0.093358 seconds.

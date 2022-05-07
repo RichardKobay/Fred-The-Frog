@@ -21,6 +21,14 @@ public class PlayerMovement : MonoBehaviour
     public float doubleJumpSpeed = 2.5f;
     private bool canDoubleJump;
 
+    //Wallslip and jump Variables
+    bool IsTouchingFront = false;
+    bool WallSliding;
+    public float WallSlidingSpeed = 0.75f;
+    bool IsTouchingRight;
+    bool IsTouchingLeft;
+    public float WallBack = 1;
+
     // Animation variables
     //public SpriteRenderer spriteRenderer;
     public SpriteRenderer spriteRenderer;
@@ -34,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
         rb2D = GetComponent<Rigidbody2D>();
     }
     
-    //Update used for the right functioning of the Double Jump
+    //Update used for the right functioning of the Double Jump, WallSlip and EE Cinematics
     private void Update()
     {
         //fred don't move if an cinematic is on
@@ -42,7 +50,7 @@ public class PlayerMovement : MonoBehaviour
         // Player jump movement
         if (Input.GetKey("space"))
         {
-            if(CheckGround.isGrounded)
+            if(CheckGround.isGrounded && WallSliding == false)
             {
                 canDoubleJump = true;
                 rb2D.velocity = new Vector2(rb2D.velocity.x, jumpSpeed);
@@ -57,7 +65,24 @@ public class PlayerMovement : MonoBehaviour
                     }
                 }
             }
+
+            if(WallSliding == true)
+            {
+                canDoubleJump = true;
+                rb2D.velocity = new Vector2(-WallBack, jumpSpeed);
+            }else{
+                if(Input.GetKeyDown("space"))
+                {
+                    if(canDoubleJump)
+                    {
+                        animator.SetBool("DoubleJump", true);
+                        rb2D.velocity = new Vector2(rb2D.velocity.x, doubleJumpSpeed);
+                        canDoubleJump = false;
+                    }
+                }
+            }
             
+        }
         }
         //checkground detects another gameObject
         if(CheckGround.isGrounded==false)
@@ -78,6 +103,19 @@ public class PlayerMovement : MonoBehaviour
         }else if(rb2D.velocity.y>0){
             animator.SetBool("Falling", false);
         }
+        
+
+        if(IsTouchingFront == true && CheckGround.isGrounded==false)
+        {
+            WallSliding = true;
+        } else{
+            WallSliding = false;
+        }
+
+        if(WallSliding)
+        {
+            animator.Play("WallSlide");
+            rb2D.velocity = new Vector2(rb2D.velocity.x, Mathf.Clamp(rb2D.velocity.y, -WallSlidingSpeed, float.MaxValue));
         }
     }
 
@@ -87,7 +125,7 @@ public class PlayerMovement : MonoBehaviour
         //fred don't move if an cinematic is on
         if (Soriano.onCinematic == false){
         // Player laft & right momement
-        if(Input.GetKey("d") || Input.GetKey("right"))
+        if(Input.GetKey("d") || Input.GetKey("right") && IsTouchingRight == false)
         {
             rb2D.velocity = new Vector2(runSpeed, rb2D.velocity.y);
             //spriteRenderer.flipX = false;
@@ -95,7 +133,7 @@ public class PlayerMovement : MonoBehaviour
             //animator.SetBool("Run", true);
             animator.SetBool("Run",true);
         }
-        else if(Input.GetKey("a") || Input.GetKey("left"))
+        else if(Input.GetKey("a") || Input.GetKey("left") && IsTouchingLeft == false)
         {
             rb2D.velocity = new Vector2(-runSpeed, rb2D.velocity.y);
             //spriteRenderer.flipX = true;
@@ -122,5 +160,27 @@ public class PlayerMovement : MonoBehaviour
             }
         }
         }
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if(collision.gameObject.CompareTag("ParedDerecha"))
+        {
+            IsTouchingFront = true;
+            IsTouchingRight = true;
+        }
+
+        if(collision.gameObject.CompareTag("ParedIzquierda"))
+        {
+            IsTouchingFront = true;
+            IsTouchingLeft = true;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        IsTouchingFront = false;
+        IsTouchingLeft = false;
+        IsTouchingRight = false;
     }
 }

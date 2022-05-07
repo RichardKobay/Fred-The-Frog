@@ -46,4 +46,11 @@ public class MainMenuManager : MonoBehaviour
     void ChangeScene(){
         SceneManager.LoadScene(levelName);
     }
+    //the interact button open the door
+    public void Interact(){
+        if(inDoor){
+            animator.SetBool("MenuDoorOpen",true);
+            Invoke("ChangeScene", 1);
+        }
+    }
 }

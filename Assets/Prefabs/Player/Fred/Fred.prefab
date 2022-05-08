@@ -168,7 +168,7 @@ GameObject:
   - component: {fileID: 7767955611383529208}
   - component: {fileID: 7767955611383529213}
   - component: {fileID: 7767955611383529159}
-  - component: {fileID: 5563102695207508232}
+  - component: {fileID: 4035371914308168932}
   m_Layer: 0
   m_Name: Fred
   m_TagString: Player
@@ -342,7 +342,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 7767955611383529212}
---- !u!114 &5563102695207508232
+--- !u!114 &4035371914308168932
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -356,9 +356,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runSpeed: 2
   jumpSpeed: 3.4
-  betterJump: 0
+  betterJump: 1
   fallMultiplier: 0.5
   lowJumpMultipler: 1
   doubleJumpSpeed: 2.5
   spriteRenderer: {fileID: 7767955611383529211}
   animator: {fileID: 7767955611383529212}
+  joystick: {fileID: 0}

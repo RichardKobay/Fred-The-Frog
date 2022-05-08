@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
+  - Spike
+  - BossHead
   layers:
   - Default
   - TransparentFX

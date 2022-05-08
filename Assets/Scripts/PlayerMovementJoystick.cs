@@ -38,7 +38,12 @@ public class PlayerMovementJoystick : MonoBehaviour
     //Update used for the right functioning of the Double Jump
     private void Update()
     {
+<<<<<<< HEAD
 
+=======
+        //don'n move in the cinematic
+        if (Soriano.onCinematic == false){
+>>>>>>> 30a65e8ac4e3c4e8ffc2dad377cb5aa4b843a670
         // Player laft & right momement
         if (horizontalMovement > 0)
         {
@@ -81,11 +86,13 @@ public class PlayerMovementJoystick : MonoBehaviour
                 animator.SetBool("Falling", false);
             }
         }
+        }
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+<<<<<<< HEAD
         // Joystick movement
         horizontalMovement = joystick.Horizontal * runSpeed;
         transform.position += new Vector3(horizontalMovement, 0, 0) * Time.deltaTime * runSpeed;
@@ -106,12 +113,21 @@ public class PlayerMovementJoystick : MonoBehaviour
                     rb2D.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultipler) * Time.deltaTime;
                 }
             }
+=======
+        //don't move in the cinematic
+        if (Soriano.onCinematic == false){
+        // Joystick horizontal movement
+        horizontalMovement = joystick.Horizontal * runSpeedHorizontal;
+        transform.position += new Vector3(horizontalMovement, 0, 0) * Time.deltaTime * runSpeed;
+>>>>>>> 30a65e8ac4e3c4e8ffc2dad377cb5aa4b843a670
         }
     }
 
     // Jump void
     public void Jump()
     {
+        //dont move in the cinematic
+        if (Soriano.onCinematic == false){
         if (CheckGround.isGrounded)
         {
             canDoubleJump = true;
@@ -125,6 +141,7 @@ public class PlayerMovementJoystick : MonoBehaviour
                 rb2D.velocity = new Vector2(rb2D.velocity.x, doubleJumpSpeed);
                 canDoubleJump = false;
             }
+        }
         }
     }
 }

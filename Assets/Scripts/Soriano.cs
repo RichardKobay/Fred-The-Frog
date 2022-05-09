@@ -10,6 +10,9 @@ public class Soriano : MonoBehaviour
     //Soriano's variable
     private bool touchSori = false;
 
+    //interact action
+    public bool interact = false;
+
     // Character collision void enter 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -35,6 +38,12 @@ public class Soriano : MonoBehaviour
         {
             onCinematic = true;
             
+        }
+        
+    }
+    public void Interact(){
+        if(touchSori){
+            onCinematic = true;
         }
     }
 }

@@ -27,7 +27,6 @@ public class PlayerMovement : MonoBehaviour
     public float WallSlidingSpeed = 0.75f;
     bool IsTouchingRight;
     bool IsTouchingLeft;
-    public float WallBack = 1;
 
     // Animation variables
     //public SpriteRenderer spriteRenderer;
@@ -48,28 +47,12 @@ public class PlayerMovement : MonoBehaviour
         //fred don't move if an cinematic is on
         if (Soriano.onCinematic == false){
         // Player jump movement
-        if (Input.GetKey("space"))
+        if (Input.GetKey("space") && WallSliding == false)
         {
-            if(CheckGround.isGrounded && WallSliding == false)
+            if(CheckGround.isGrounded)
             {
                 canDoubleJump = true;
                 rb2D.velocity = new Vector2(rb2D.velocity.x, jumpSpeed);
-            }else{
-                if(Input.GetKeyDown("space"))
-                {
-                    if(canDoubleJump)
-                    {
-                        animator.SetBool("DoubleJump", true);
-                        rb2D.velocity = new Vector2(rb2D.velocity.x, doubleJumpSpeed);
-                        canDoubleJump = false;
-                    }
-                }
-            }
-
-            if(WallSliding == true)
-            {
-                canDoubleJump = true;
-                rb2D.velocity = new Vector2(-WallBack, jumpSpeed);
             }else{
                 if(Input.GetKeyDown("space"))
                 {
@@ -115,7 +98,7 @@ public class PlayerMovement : MonoBehaviour
         if(WallSliding)
         {
             animator.Play("WallSlide");
-            rb2D.velocity = new Vector2(rb2D.velocity.x, Mathf.Clamp(rb2D.velocity.y, -WallSlidingSpeed, float.MaxValue));
+            rb2D.velocity = new Vector2(rb2D.velocity.x, Mathf.Clamp(rb2D.velocity.y, -WallSlidingSpeed, float.MaxValue));            
         }
     }
 

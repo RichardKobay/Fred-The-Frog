@@ -39,6 +39,8 @@ public class PlayerMovementJoystick : MonoBehaviour
     //Update used for the right functioning of the Double Jump
     private void Update()
     {
+        //don'n move in the cinematic
+        if (Soriano.onCinematic == false){
         // Player laft & right momement
         if (horizontalMovement > 0)
         {
@@ -81,19 +83,25 @@ public class PlayerMovementJoystick : MonoBehaviour
                 animator.SetBool("Falling", false);
             }
         }
+        }
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        //don't move in the cinematic
+        if (Soriano.onCinematic == false){
         // Joystick horizontal movement
         horizontalMovement = joystick.Horizontal * runSpeedHorizontal;
         transform.position += new Vector3(horizontalMovement, 0, 0) * Time.deltaTime * runSpeed;
+        }
     }
 
     // Joystick Jump function
     public void Jump()
     {
+        //dont move in the cinematic
+        if (Soriano.onCinematic == false){
         if (CheckGround.isGrounded)
         {
             canDoubleJump = true;
@@ -107,6 +115,7 @@ public class PlayerMovementJoystick : MonoBehaviour
                 rb2D.velocity = new Vector2(rb2D.velocity.x, doubleJumpSpeed);
                 canDoubleJump = false;
             }
+        }
         }
     }
 

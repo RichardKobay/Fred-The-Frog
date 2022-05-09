@@ -9,6 +9,7 @@ TagManager:
   - BossHead
   - ParedDerecha
   - ParedIzquierda
+  - SoloEnCines
   layers:
   - Default
   - TransparentFX

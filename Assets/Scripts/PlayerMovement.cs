@@ -5,12 +5,12 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 
+    // RigidBody variable
+    Rigidbody2D rb2D;
+
     // Player movement variables
     public float runSpeed = 2;
     public float jumpSpeed = 3.4f;
-
-    // RigidBody variable
-    Rigidbody2D rb2D;
 
     // Better jump variables
     public bool betterJump = false;
@@ -29,10 +29,7 @@ public class PlayerMovement : MonoBehaviour
     bool IsTouchingLeft;
 
     // Animation variables
-    //public SpriteRenderer spriteRenderer;
     public SpriteRenderer spriteRenderer;
-
-    //public Animator animator;
     public Animator animator;
 
     // Start is called before the first frame update
@@ -44,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
     //Update used for the right functioning of the Double Jump, WallSlip and EE Cinematics
     private void Update()
     {
-        //fred don't move if an cinematic is on
+        // Cancel fred's movement if animation is on
         if (Soriano.onCinematic == false){
         // Player jump movement
         if (Input.GetKey("space") && WallSliding == false)
@@ -66,8 +63,13 @@ public class PlayerMovement : MonoBehaviour
             }
             
         }
+<<<<<<< HEAD
         }
         //checkground detects another gameObject
+=======
+
+        // checkground detects another gameObject
+>>>>>>> 9feb424279e16f21d4065f7e2150b43b22638315
         if(CheckGround.isGrounded==false)
         {
             animator.SetBool("Jump", true);
@@ -105,6 +107,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+<<<<<<< HEAD
         //fred don't move if an cinematic is on
         if (Soriano.onCinematic == false){
         // Player laft & right momement
@@ -133,15 +136,43 @@ public class PlayerMovement : MonoBehaviour
         if(betterJump)
         {
             if(rb2D.velocity.y < 0)
+=======
+        // Detects if Cinematic is on
+        if (Soriano.onCinematic == false)
+        {
+            // Player laft & right momement
+            if (Input.GetKey("d") || Input.GetKey("right"))
+>>>>>>> 9feb424279e16f21d4065f7e2150b43b22638315
             {
-                rb2D.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier) * Time.deltaTime;
+                rb2D.velocity = new Vector2(runSpeed, rb2D.velocity.y);
+                spriteRenderer.flipX = false;
+                animator.SetBool("Run", true);
+            }
+            else if (Input.GetKey("a") || Input.GetKey("left"))
+            {
+                rb2D.velocity = new Vector2(-runSpeed, rb2D.velocity.y);
+                spriteRenderer.flipX = true;
+                animator.SetBool("Run", true);
+            }
+            else
+            {
+                rb2D.velocity = new Vector2(0, rb2D.velocity.y);
+                animator.SetBool("Run", false);
             }
 
-            if(rb2D.velocity.y > 0 && !Input.GetKey("space"))
+            // Better Jump
+            if (betterJump)
             {
-                rb2D.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultipler) * Time.deltaTime;
+                if (rb2D.velocity.y < 0)
+                {
+                    rb2D.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier) * Time.deltaTime;
+                }
+
+                if (rb2D.velocity.y > 0 && !Input.GetKey("space"))
+                {
+                    rb2D.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultipler) * Time.deltaTime;
+                }
             }
-        }
         }
     }
 

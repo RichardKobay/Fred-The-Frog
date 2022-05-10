@@ -21,12 +21,7 @@ public class PlayerMovement : MonoBehaviour
     public float doubleJumpSpeed = 2.5f;
     private bool canDoubleJump;
 
-    //Wallslip and jump Variables
-    bool IsTouchingFront = false;
-    bool WallSliding;
-    public float WallSlidingSpeed = 0.75f;
-    bool IsTouchingRight;
-    bool IsTouchingLeft;
+    
 
     // Animation variables
     public SpriteRenderer spriteRenderer;
@@ -44,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
         // Cancel fred's movement if animation is on
         if (Soriano.onCinematic == false){
         // Player jump movement
-        if (Input.GetKey("space") && WallSliding == false)
+        if (Input.GetKey("space"))
         {
             if(CheckGround.isGrounded)
             {
@@ -63,13 +58,8 @@ public class PlayerMovement : MonoBehaviour
             }
             
         }
-<<<<<<< HEAD
         }
         //checkground detects another gameObject
-=======
-
-        // checkground detects another gameObject
->>>>>>> 9feb424279e16f21d4065f7e2150b43b22638315
         if(CheckGround.isGrounded==false)
         {
             animator.SetBool("Jump", true);
@@ -90,28 +80,16 @@ public class PlayerMovement : MonoBehaviour
         }
         
 
-        if(IsTouchingFront == true && CheckGround.isGrounded==false)
-        {
-            WallSliding = true;
-        } else{
-            WallSliding = false;
-        }
-
-        if(WallSliding)
-        {
-            animator.Play("WallSlide");
-            rb2D.velocity = new Vector2(rb2D.velocity.x, Mathf.Clamp(rb2D.velocity.y, -WallSlidingSpeed, float.MaxValue));            
-        }
+        
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-<<<<<<< HEAD
         //fred don't move if an cinematic is on
         if (Soriano.onCinematic == false){
         // Player laft & right momement
-        if(Input.GetKey("d") || Input.GetKey("right") && IsTouchingRight == false)
+        if(Input.GetKey("d") || Input.GetKey("right"))
         {
             rb2D.velocity = new Vector2(runSpeed, rb2D.velocity.y);
             //spriteRenderer.flipX = false;
@@ -119,7 +97,7 @@ public class PlayerMovement : MonoBehaviour
             //animator.SetBool("Run", true);
             animator.SetBool("Run",true);
         }
-        else if(Input.GetKey("a") || Input.GetKey("left") && IsTouchingLeft == false)
+        else if(Input.GetKey("a") || Input.GetKey("left"))
         {
             rb2D.velocity = new Vector2(-runSpeed, rb2D.velocity.y);
             //spriteRenderer.flipX = true;
@@ -135,30 +113,7 @@ public class PlayerMovement : MonoBehaviour
         
         if(betterJump)
         {
-            if(rb2D.velocity.y < 0)
-=======
-        // Detects if Cinematic is on
-        if (Soriano.onCinematic == false)
-        {
-            // Player laft & right momement
-            if (Input.GetKey("d") || Input.GetKey("right"))
->>>>>>> 9feb424279e16f21d4065f7e2150b43b22638315
-            {
-                rb2D.velocity = new Vector2(runSpeed, rb2D.velocity.y);
-                spriteRenderer.flipX = false;
-                animator.SetBool("Run", true);
-            }
-            else if (Input.GetKey("a") || Input.GetKey("left"))
-            {
-                rb2D.velocity = new Vector2(-runSpeed, rb2D.velocity.y);
-                spriteRenderer.flipX = true;
-                animator.SetBool("Run", true);
-            }
-            else
-            {
-                rb2D.velocity = new Vector2(0, rb2D.velocity.y);
-                animator.SetBool("Run", false);
-            }
+            
 
             // Better Jump
             if (betterJump)
@@ -176,25 +131,6 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        if(collision.gameObject.CompareTag("ParedDerecha"))
-        {
-            IsTouchingFront = true;
-            IsTouchingRight = true;
-        }
-
-        if(collision.gameObject.CompareTag("ParedIzquierda"))
-        {
-            IsTouchingFront = true;
-            IsTouchingLeft = true;
-        }
-    }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        IsTouchingFront = false;
-        IsTouchingLeft = false;
-        IsTouchingRight = false;
-    }
+   
+}
 }

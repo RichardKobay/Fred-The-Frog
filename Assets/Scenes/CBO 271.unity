@@ -5317,6 +5317,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4035371914308168932, guid: ad088efe1c550c442a768d0932495b8c, type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 384563251}
+    - target: {fileID: 4035371914308168932, guid: ad088efe1c550c442a768d0932495b8c, type: 3}
+      propertyPath: runSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4035371914308168932, guid: ad088efe1c550c442a768d0932495b8c, type: 3}
+      propertyPath: lowJumpMultipler
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5563102695207508232, guid: ad088efe1c550c442a768d0932495b8c, type: 3}
       propertyPath: joystick
       value: 
@@ -5375,7 +5387,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7767955611383529213, guid: ad088efe1c550c442a768d0932495b8c, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7767955611383529214, guid: ad088efe1c550c442a768d0932495b8c, type: 3}
       propertyPath: m_Name
@@ -5385,11 +5397,11 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: ad088efe1c550c442a768d0932495b8c, type: 3}
 --- !u!114 &410265955 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5563102695207508232, guid: ad088efe1c550c442a768d0932495b8c, type: 3}
+  m_CorrespondingSourceObject: {fileID: 4035371914308168932, guid: ad088efe1c550c442a768d0932495b8c, type: 3}
   m_PrefabInstance: {fileID: 410265954}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 671d07dab207da944b5d9b1ec188780c, type: 3}
   m_Name: 
@@ -5473,7 +5485,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &523515329
 RectTransform:
@@ -7816,7 +7828,7 @@ RectTransform:
   m_GameObject: {fileID: 1939970845}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalScale: {x: 7, y: 7, z: 1}
   m_Children: []
   m_Father: {fileID: 523515329}
   m_RootOrder: 0

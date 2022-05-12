@@ -23,12 +23,12 @@ public class DSplatforms : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyUp(KeyCode.DownArrow) || Input.GetKeyUp("s") || verticalMovement< 0)
+        if(Input.GetKeyUp(KeyCode.DownArrow) || Input.GetKeyUp("s") || verticalMovement< -.1)
         {
            WaitedTime = StartWaitTime;
         }
 
-        if(Input.GetKey(KeyCode.DownArrow) || Input.GetKey("s") || verticalMovement< 0)
+        if(Input.GetKey(KeyCode.DownArrow) || Input.GetKey("s") || verticalMovement< -.1)
         {
             if(WaitedTime <= 0)
             {

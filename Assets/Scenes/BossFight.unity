@@ -931,6 +931,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.48, y: 0.8}
   m_EdgeRadius: 0
+--- !u!114 &736157278 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4035371914308168932, guid: ad088efe1c550c442a768d0932495b8c, type: 3}
+  m_PrefabInstance: {fileID: 1834655797}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 671d07dab207da944b5d9b1ec188780c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &752134843 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2101028294646291888, guid: 26a5cfba1fa907647b884880f1d8aeba, type: 3}
@@ -1024,7 +1035,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1834655798}
+      - m_Target: {fileID: 736157278}
         m_TargetAssemblyTypeName: PlayerMovementJoystick, Assembly-CSharp
         m_MethodName: Jump
         m_Mode: 1
@@ -33088,6 +33099,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4035371914308168932, guid: ad088efe1c550c442a768d0932495b8c, type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 71870581}
+    - target: {fileID: 4035371914308168932, guid: ad088efe1c550c442a768d0932495b8c, type: 3}
+      propertyPath: runSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4035371914308168932, guid: ad088efe1c550c442a768d0932495b8c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4035371914308168932, guid: ad088efe1c550c442a768d0932495b8c, type: 3}
+      propertyPath: lowJumpMultipler
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5563102695207508232, guid: ad088efe1c550c442a768d0932495b8c, type: 3}
       propertyPath: joystick
       value: 
@@ -33146,7 +33173,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7767955611383529213, guid: ad088efe1c550c442a768d0932495b8c, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7767955611383529214, guid: ad088efe1c550c442a768d0932495b8c, type: 3}
       propertyPath: m_Name
@@ -33154,17 +33181,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad088efe1c550c442a768d0932495b8c, type: 3}
---- !u!114 &1834655798 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5563102695207508232, guid: ad088efe1c550c442a768d0932495b8c, type: 3}
-  m_PrefabInstance: {fileID: 1834655797}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 671d07dab207da944b5d9b1ec188780c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1877980175 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2101028294646291888, guid: 26a5cfba1fa907647b884880f1d8aeba, type: 3}

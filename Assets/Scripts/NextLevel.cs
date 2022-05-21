@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class NextLevel : MonoBehaviour
 {
     public Text levelCleared;
+    public Text bestScore;
 
     // transitin variable
     public GameObject transition;
@@ -23,7 +24,7 @@ public class NextLevel : MonoBehaviour
                 //transition.SetActive(true);
                 Invoke("ChangeScene", 1);
                 animator.SetBool("DoorOpen",true);
-
+                PlayerPrefs.SetInt("BestScore", LevelScore.levelScoreInt);
             }
             else
             {

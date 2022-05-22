@@ -15,13 +15,24 @@ public class UIManager : MonoBehaviour
 
     public void Return()
     {
+        SceneManager.GetActiveScene();
         Time.timeScale = 1;
-        menuPanel.SetActive(false);
     }
 
     public void GoMainMenu()
     {
         Time.timeScale = 1;
         SceneManager.LoadScene("MainMenu");
+    }
+
+    public void play ()
+    {
+        Time.timeScale = 1;
+        menuPanel.SetActive(false);
+    }
+
+    public void exit ()
+    {
+        Application.Quit();
     }
 }

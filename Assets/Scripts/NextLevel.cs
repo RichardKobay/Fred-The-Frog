@@ -24,7 +24,7 @@ public class NextLevel : MonoBehaviour
                 //transition.SetActive(true);
                 Invoke("ChangeScene", 1);
                 animator.SetBool("DoorOpen",true);
-                PlayerPrefs.SetInt("BestScore", LevelScore.levelScoreInt);
+                PlayerPrefs.SetInt("BestScore", (PlayerPrefs.GetInt("BestScore") + LevelScore.levelScoreInt));
             }
             else
             {
